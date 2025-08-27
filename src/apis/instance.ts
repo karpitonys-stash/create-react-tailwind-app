@@ -60,7 +60,7 @@ instance.interceptors.response.use(
               originalRequest.headers['Authorization'] = `Bearer ${token}`;
               resolve(instance(originalRequest));
             },
-            reject: (err) => reject(err),
+            reject: err => reject(err),
           });
         });
       }

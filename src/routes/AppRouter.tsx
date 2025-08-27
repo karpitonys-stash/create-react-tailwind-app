@@ -1,9 +1,4 @@
-import {
-  Outlet,
-  RouteObject,
-  RouterProvider,
-  createBrowserRouter,
-} from 'react-router';
+import { Outlet, RouteObject, RouterProvider, createBrowserRouter } from 'react-router';
 import RootPage from '@/pages/RootPage';
 import SomethingWentWrongPage from '@/components/status/error/SomethingWentWrongPage';
 import { UnknownErrorBoundary } from '@/components/status/error/UnknownErrorBoundary';
