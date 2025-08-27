@@ -2,7 +2,6 @@ import { Outlet, RouteObject, RouterProvider, createBrowserRouter } from 'react-
 import RootPage from '@/pages/RootPage';
 import SomethingWentWrongPage from '@/components/status/error/SomethingWentWrongPage';
 import { UnknownErrorBoundary } from '@/components/status/error/UnknownErrorBoundary';
-import { APIErrorBoundary } from '@/components/status/error/APIErrorBoundary';
 import { Suspense } from 'react';
 import Loader from '@/components/status/loading/Loader';
 import type { ROUTE_TYPE } from '@/constants/path';
@@ -22,11 +21,9 @@ const router = createBrowserRouter([
     path: '/',
     element: (
       <UnknownErrorBoundary>
-        <APIErrorBoundary>
-          <Suspense fallback={<Loader />}>
-            <Outlet />
-          </Suspense>
-        </APIErrorBoundary>
+        <Suspense fallback={<Loader />}>
+          <Outlet />
+        </Suspense>
       </UnknownErrorBoundary>
     ),
     children: [

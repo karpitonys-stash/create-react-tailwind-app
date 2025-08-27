@@ -1,4 +1,4 @@
-import ErrorPageLayout from './ErrorPageLayout';
+import ErrorPageLayout from '@/layouts/ErrorPageLayout';
 
 interface IErrorPageProps {
   status: string;
